@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://dash.plotly.com/project-maintenance">
-    <img src="https://dash.plotly.com/assets/images/maintained-by-community.png" width="400px" alt="Maintained by the Plotly Community">
+    <img src="https://dash.plotly.com/assets/images/maintained-by-plotly.png" width="400px" alt="Maintained by Plotly">
   </a>
 </div>
 
@@ -24,6 +24,7 @@ python -k ba001
 
 Note that Python 3.8 or greater is required.
 
+
 ## Installation
 
 ```bash
@@ -35,6 +36,13 @@ for additional OIDC support:
 ```bash
 pip install "dash-auth[oidc]"
 ```
+
+> Please note that Plotly will continue to merge bug fixes to this package,
+> but will no longer accept new features as we consider this package feature-complete.
+> For those looking for a more advanced authentication offering from Plotly,
+> Dash Enterprise offers authentication middleware for Dash apps.
+> Learn more at: https://plotly.com/dash/authentication/
+
 
 ## Usage
 
@@ -121,7 +129,7 @@ app.layout = html.Div(
 )
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True)
 ```
 
 ---
@@ -267,7 +275,7 @@ def login_handler():
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True)
 ```
 
 ### User-group-based permissions
